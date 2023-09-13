@@ -1,0 +1,16 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2><u>This is the menus</u></h2>
+    <ol>
+        {%  for item in orders %}
+            <li>{{item.order_id}}:  {{item.name_of_menu_ordered}}:  {{item.customer_preferences}}:  {{item.customer_name}}:  {{item.waiter}}:  {{item.table_of_order}}</li>
+        {% endfor %}
+        <a href="/admin/">Admin</a>
+    </ol>
+</body>
+</html>
