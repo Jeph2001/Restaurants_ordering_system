@@ -33,7 +33,7 @@ def login_view(request):
             return redirect('/orders/')
         else:
             messages.info(request, 'Wrong Password or username')
-            return redirect('/login/')
+            return redirect('/')
     
     return render(request, 'login_page.html')
 
@@ -41,7 +41,7 @@ def login_view(request):
 def logout_view(request):
     logout(request)
     return redirect('/')
-    
-            
+
+
         
 

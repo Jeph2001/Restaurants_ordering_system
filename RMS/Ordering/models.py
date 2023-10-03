@@ -1,5 +1,6 @@
 from django.db import models
 
+
 # Model to handle the Menu data as required. like name, description and price
 class Menu(models.Model):
     name = models.CharField(max_length=100)
@@ -39,6 +40,12 @@ class Orders(models.Model):
 
     def __str__(self):
         return str(self.order_id)
+
+
+
+
+
+
         
 
 
