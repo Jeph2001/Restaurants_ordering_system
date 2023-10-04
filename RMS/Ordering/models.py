@@ -31,12 +31,23 @@ class Tables(models.Model):
 
 # Model class to store all order history and related data
 class Orders(models.Model):
+    DONE = 'DONE'
+    ONGOING = 'ONGOING'
+    NONE = 'NONE'
+
+    ORDER_STATUS =[
+        (DONE, 'DONE'),
+        (ONGOING, 'ONGOING'),
+        (NONE, 'NONE')
+    ]
+
     order_id = models.IntegerField(default=1)
     name_of_menu_ordered = models.ForeignKey(Menu, on_delete=models.CASCADE)
     customer_preferences = models.CharField(max_length=500)
     customer_name = models.CharField(max_length=100, default='your name')
     waiter = models.CharField(max_length=100, default="waiter's name")
     table_of_order = models.ForeignKey(Tables, on_delete=models.CASCADE, default='1')
+    status = models.CharField(max_length=30, choices=ORDER_STATUS, default=NONE)
 
     def __str__(self):
         return str(self.order_id)

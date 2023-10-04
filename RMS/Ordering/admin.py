@@ -11,7 +11,7 @@ class TablesAdmin(admin.ModelAdmin):
 
 
 class OrdersAdmin(admin.ModelAdmin):
-    list_display = ['order_id', 'name_of_menu_ordered', 'customer_preferences', 'customer_name', 'waiter', 'table_of_order']
+    list_display = ['order_id', 'name_of_menu_ordered', 'customer_preferences', 'customer_name', 'waiter', 'table_of_order', 'status']
 
 
 

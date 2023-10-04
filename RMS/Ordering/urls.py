@@ -10,4 +10,5 @@ urlpatterns = [
     path('', views.login_view),
     path('logout/', views.logout_view),
     path('change/', auth_views.PasswordChangeView.as_view(template_name="login.html")),
+    path('send/', views.send_email),
 ]

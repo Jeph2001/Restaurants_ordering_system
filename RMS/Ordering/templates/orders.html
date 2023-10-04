@@ -10,7 +10,7 @@
         {%  for item in orders %}
             <li>{{item.order_id}}:  {{item.name_of_menu_ordered}}:  {{item.customer_preferences}}:  {{item.customer_name}}:  {{item.waiter}}:  {{item.table_of_order}}</li>
         {% endfor %}
-        <a href="/admin/">Admin</a>
+        <a href="/admin/">Staff Only</a>
         <a href="/logout/">Logout</a>
         <a href="/change/">Change your Password</a>
     </ol>
